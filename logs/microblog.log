@@ -1,0 +1,107 @@
+2018-05-26 09:14:24,739 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-26 09:14:30,373 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:22:15,635 INFO: Microblog startup [in c:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:23:03,597 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:23:34,235 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:24:22,220 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:26:59,189 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:34:02,610 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:43:19,488 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:43:25,059 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:53:15,625 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:58:31,909 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
+2018-05-28 13:58:34,067 ERROR: Exception on /user/TEST1 [GET] [in c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Jeff\Documents\Python Playground\microblog\app\routes.py", line 82, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Jeff\Documents\Python Playground\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Jeff\Documents\Python Playground\microblog\app\templates\base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\Jeff\Documents\Python Playground\microblog\app\templates\user.html", line 14, in block "content"
+    <p><a href="{{ url_for('follow', username=user.username) }}">Follow</a></p>
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
+2018-05-28 14:00:04,814 ERROR: Exception on /user/TEST1 [GET] [in c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Jeff\Documents\Python Playground\microblog\app\routes.py", line 82, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Jeff\Documents\Python Playground\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Jeff\Documents\Python Playground\microblog\app\templates\base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\Jeff\Documents\Python Playground\microblog\app\templates\user.html", line 14, in block "content"
+    <p><a href="{{ url_for('follow', username=user.username) }}">Follow</a></p>
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "c:\users\jeff\documents\python playground\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
+2018-05-28 14:01:19,943 INFO: Microblog startup [in C:\Users\Jeff\Documents\Python Playground\microblog\app\__init__.py:50]
